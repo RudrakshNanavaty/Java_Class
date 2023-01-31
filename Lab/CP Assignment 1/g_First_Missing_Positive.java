@@ -15,18 +15,11 @@ public class g_First_Missing_Positive {
         scan.close();
 
         for (int i = 1; i <= nums.length + 1; i++) {
-            boolean flag = false;
-
-            for (int j = 0; j < nums.length && !flag; j++) {
-
-                if (nums[j] == i)
-                    flag = true;
-            }
-
-            if (!flag) {
-                System.out.println(i);
+            if(nums[i-1] != i) {
+                System.out.println("First Missing Positive: ", i);
                 return;
             }
+            System.out.println("First Missing Positive: ", i+1);   
         }
     }
 }
